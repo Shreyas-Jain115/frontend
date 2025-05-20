@@ -1,0 +1,125 @@
+/* Questions.css - Changes Highlighted */
+
+/* Import Fonts (Optional - place in your main CSS or index.html if preferred) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&family=Source+Code+Pro:wght@400;600&family=Lato:wght@400&display=swap');
+
+.questions-container {
+  background-color: #121212;
+  color: #e0e0e0;
+  min-height: 100vh;
+  padding: 2rem 1.5rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.questions-title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #bb86fc;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.questions-list {
+  display: grid;
+  /* CHANGE HERE: Reduced min/max width for cards */
+  /* Was: minmax(300px, 1fr) or minmax(300px, 380px) */
+  grid-template-columns: repeat(auto-fill, minmax(260px, 350px)); /* Smaller range */
+  gap: 1.2rem; /* Slightly reduced gap */
+}
+
+.question-card {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-left: 4px solid #9575cd;
+  border-radius: 6px; /* Slightly smaller radius */
+  /* CHANGE HERE: Reduced padding */
+  /* Was: padding: 1.5rem; */
+  padding: 1rem; /* Reduced internal spacing */
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, background-color 0.2s ease-out;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  /* You could also add a max-height if needed, but let's try width first */
+  /* max-height: 400px; */ /* Example */
+  /* overflow: hidden; */ /* Needed if using max-height and content might overflow */
+}
+
+
+.question-card:hover {
+  transform: translateY(-4px); /* Slightly less lift */
+  box-shadow: 0 6px 12px rgba(149, 117, 205, 0.18); /* Adjusted glow */
+  background-color: #252525;
+  border-color: #9575cd;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* CHANGE HERE: Reduced bottom margin/padding */
+  margin-bottom: 0.8rem; /* Was 1rem */
+  border-bottom: 1px solid #333;
+  padding-bottom: 0.6rem; /* Was 0.8rem */
+}
+
+.question-title {
+  color: #bb86fc;
+  margin-bottom: 0;
+  /* CHANGE HERE: Slightly smaller title */
+  font-size: 1.15rem; /* Was 1.25rem */
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+.difficulty-badge {
+  font-size: 0.7rem; /* Slightly smaller badge text */
+  padding: 0.35em 0.6em; /* Adjusted badge padding */
+  font-weight: 600;
+  border-radius: 12px;
+}
+
+/* Badge color overrides remain the same */
+.badge.bg-success { background-color: #2e7d32 !important; color: #fff !important; }
+.badge.bg-warning { background-color: #ff8f00 !important; color: #000 !important; }
+.badge.bg-danger { background-color: #c62828 !important; color: #fff !important; }
+.badge.bg-secondary { background-color: #555 !important; color: #eee !important; }
+
+
+.question-description {
+  color: #bdbdbd;
+  /* CHANGE HERE: Reduced bottom margin and font size */
+  margin-bottom: 1rem; /* Was 1.2rem */
+  line-height: 1.5; /* Slightly tighter line spacing */
+  font-size: 0.9rem; /* Slightly smaller description text */
+  font-family: 'Lato', sans-serif;
+  flex-grow: 1;
+}
+
+.question-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem; /* Adjusted gap */
+  font-size: 0.75rem; /* Slightly smaller detail text */
+  color: #a0a0a0;
+  font-family: 'Source Code Pro', monospace;
+  margin-top: auto;
+  padding-top: 0.6rem; /* Was 0.8rem */
+  border-top: 1px solid #333;
+}
+
+.detail-item {
+  background-color: #2a2a2a;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.detail-item strong {
+  color: #bdbdbd;
+  font-weight: 600;
+}
+
+/* Optional Solve Button styles remain the same (commented out) */

@@ -1,0 +1,73 @@
+/* TestFeedback.css */
+.test-feedback-container {
+    padding: 2rem;
+    background-color: #1a202c; /* Dark background */
+    color: #e2e8f0; /* Light text */
+    font-family: sans-serif;
+  }
+  
+  .test-feedback-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #d2a8ff; /* Purple Title*/
+  }
+  
+  .test-feedback-table-container {
+    overflow-x: auto;
+    border-radius: 0.5rem;
+    border: 1px solid #4a5568; /* Dark border */
+  }
+  
+  .test-feedback-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .test-feedback-header-row {
+    background-color: #2d3748; /* Darker header background */
+    color: #cbd5e0; /* Lighter header text */
+  }
+  
+  .test-feedback-header-cell,
+  .test-feedback-data-cell,
+  .test-feedback-action-cell,
+  .test-feedback-no-data-cell {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #4a5568; /* Dark cell borders */
+  }
+  
+  .test-feedback-data-row.even {
+    background-color: #2d3748;
+  }
+  
+  .test-feedback-data-row.odd {
+    background-color: #1a202c;
+  }
+  
+  .test-feedback-data-row:hover {
+    background-color: #4a5568; /* Darker hover */
+  }
+  
+  .test-feedback-action-cell {
+    text-align: center;
+  }
+  
+  .test-feedback-attempt-button {
+    background-color: #9f7aea; /* Purple button */
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .test-feedback-attempt-button:hover {
+    background-color: #805ad5; /* Darker purple on hover */
+  }
+  
+  .test-feedback-no-data-cell {
+    text-align: center;
+    color: #a0aec0; /* Grey text for no data */
+  } 
