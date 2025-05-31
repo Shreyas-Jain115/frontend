@@ -2,10 +2,10 @@ import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { db1 } from "../firebaseConfig"; // Updated to use db1
-
+import { API_URL1 } from "./api";
 const WideTracking = () => {
     let userId = "fff112";
-    const url="https://1w7vd0hz-5000.inc1.devtunnels.ms/";
+    const url=API_URL1;
     const canvasRef = useRef(null);
     const [currentImage, setCurrentImage] = useState(null);
     const [fetching, setFetching] = useState(false);

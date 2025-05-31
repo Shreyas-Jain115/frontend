@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaCamera, FaSave, FaPlay, FaArrowRight } from "react-icons/fa";
-
+import { API_URL2 } from "./api"; // Adjust the import path as necessary
 const WebcamCapture = () => {
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
@@ -34,7 +34,7 @@ const WebcamCapture = () => {
     if (!capturedImage) return;
     const uniqueInteger = 3;
     try {
-      const response = await fetch("https://1w7vd0hz-5002.inc1.devtunnels.ms/upload", {
+      const response = await fetch(`${API_URL2}upload`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

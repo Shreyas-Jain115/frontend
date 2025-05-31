@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import axios from "axios";
+import {API_URL} from "./api"; // Adjust the import path as necessary
 
 const EyeBallTrack = () => {
     const videoRef = useRef(null);
@@ -46,7 +47,7 @@ const EyeBallTrack = () => {
             formData.append("userId", 3); // Add userId to formData
             formData.append("currentTime", currentTime); // Add unique_id to formData
             try {
-                const response = await axios.post("https://1w7vd0hz-5001.inc1.devtunnels.ms/process", formData, {
+                const response = await axios.post(`${API_URL}/process`, formData, {
                     headers: { "Content-Type": "multipart/form-data" },
                 });
 
